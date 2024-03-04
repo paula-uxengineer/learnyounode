@@ -1,15 +1,9 @@
 var fs = require('fs')  
+let path2 : string = process.argv[2]
 
-fs.readFile(process.argv[2], function checkContents (err: any, contents: any) : void{
-    var lines = contents.toString().split('/n').length -1
+fs.readFile(path2, (err: Error, contents: Buffer) : void => {
 
-    var number = +process.argv[3]
- 
-    if(lines >= number){
-        console.log(`This file has${number} or more lines`)
-    }else{
-        console.log('This file is void')
-    }
+    var lines = contents.toString().split('\n').length -1
 
-    console.log(lines)
+    console.log(lines);
 });

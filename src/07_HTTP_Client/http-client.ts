@@ -1,5 +1,5 @@
-const http = require('http')
-var url = process.argv[2]
+let http = require('http')
+let url = process.argv[2]
 
 http.get(url, function (response: any) {
     response.setEncoding('utf-8')
