@@ -1,14 +1,14 @@
-const arr = process.argv
+const arr = process.argv // retrieve command line arguments as an array
 
-export function sumarArgumentos (arr: string[]): number{
+export function sumArguments (arr: string[]): number{ // a function to sum the numerical arguments in the array
 
-    let node = 0
+    let total = 0
 
     for(let i = 2; i < arr.length; i++){
-        node += parseInt(arr[i]) 
+        total += parseInt(arr[i]) 
     }
-    return node
+    return total
 }
 
-const resultado = sumarArgumentos(arr);
-console.log(resultado);
+const result = sumArguments(arr); //pass the array command line arguments
+console.log(result); //print result

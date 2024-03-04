@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sumarArgumentos = void 0;
-var arr = process.argv;
-function sumarArgumentos(arr) {
-    var node = 0;
+exports.sumArguments = void 0;
+var arr = process.argv; // retrieve command line arguments as an array
+function sumArguments(arr) {
+    var total = 0;
     for (var i = 2; i < arr.length; i++) {
-        node += parseInt(arr[i]);
+        total += parseInt(arr[i]);
     }
-    return node;
+    return total;
 }
-exports.sumarArgumentos = sumarArgumentos;
-var resultado = sumarArgumentos(arr);
-console.log(resultado);
+exports.sumArguments = sumArguments;
+var result = sumArguments(arr); //pass the array command line arguments
+console.log(result); //print result

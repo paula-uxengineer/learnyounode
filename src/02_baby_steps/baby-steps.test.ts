@@ -1,7 +1,11 @@
-import {sumarArgumentos} from './baby-steps'; 
+const { sumArguments } = require('./sumArguments'); 
 
-test('Suma de argumentos de línea de comandos', () => {
-    const mockArgs = ['node', 'nombreDelScript.js', '3', '5', '7'];
+it('should return the correct sum of numerical arguments', () => {
 
-    expect(sumarArgumentos(mockArgs)).toBe(15);
+  const arr = ['node', 'script.js', '2', '4', '6'];
+
+  const result = sumArguments(arr);
+
+  expect(result).toBe(2 + 4 + 6); // Assert that the result is equal to the sum of numerical arguments
 });
+
